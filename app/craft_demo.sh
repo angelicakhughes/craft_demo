@@ -1,4 +1,5 @@
 #!/bin/bash
+#Usage: ./craft_demo.sh AL,BE,GE,LI,FI
   
 #export from api to json file
 curl https://www.travel-advisory.info/api -o "data.json"

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+from http import HTTPStatus
 import json
 import requests
 from flask import Flask, jsonify, request, Response
@@ -43,6 +45,10 @@ def convert():
 		except KeyError:
 	                return (x + ' country code does not exist. Please rerun the program without this country code')
 		continue
+
+@app.route('/health')
+def health():
+        return {'message': 'Healthy'} 
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

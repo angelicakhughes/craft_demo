@@ -3,9 +3,7 @@
 import logging
 import requests
 import json
-import traceback
 import argparse
-import sys
 from flask import Flask, jsonify, request, Response
 app = Flask(__name__)
 
@@ -32,7 +30,7 @@ with open('data.json', 'w') as f:
 # Look up country by country code
 countrydata = filedata['data']
 
-inputs = input("Enter a multiple country code values: ").split()
+inputs = input(bcolors.OKBLUE + "Enter a multiple country code values: " + bcolors.ENDC).split()
 
 logging.info('Looking up countries')
 
@@ -42,24 +40,6 @@ for x in inputs:
 	except KeyError:
 		print(bcolors.WARNING + (x) + " country code does not exist." + bcolors.ENDC)
 		continue
-
-@app.route("/")
-def country_lookup():
-  return "Here is the country lookup!"
-
-@app.route('/diag', methods = ['GET'])
-def api_hello():
-    data = {
-        'api_status': {
-        'code' : 200,
-        'status' : "ok"
-    }}
-    js = json.dumps(data)
-
-    resp = Response(js, status=200, mimetype='application/json')
-    resp.headers['Link'] = 'https://www.travel-advisory.info/api'
-
-    return resp
 
 #PARSER = argparse.ArgumentParser(
 #        description='Country Lookup Tool',
