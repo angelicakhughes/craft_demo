@@ -1,6 +1,6 @@
 #!/bin/bash
   
-#export from api to file
+#export from api to json file
 curl https://www.travel-advisory.info/api -o "data.json"
 
 #convert to comma seperate and quotes
