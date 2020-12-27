@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-from http import HTTPStatus
+#!/usr/bin/python3
 import json
 import requests
 from flask import Flask, jsonify, request, Response
