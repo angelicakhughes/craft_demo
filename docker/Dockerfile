@@ -1,18 +1,9 @@
-FROM ubuntu:16.04
-  
+FROM python:3.7
 
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
-
-# We copy just the requirements.txt first to leverage Docker cache
-COPY /app/requirements.txt /app/requirements.txt
-
+RUN mkdir /app
 WORKDIR /app
-
+ADD . /app/
 RUN pip install -r requirements.txt
 
-COPY . /app
-
-ENTRYPOINT [ "python" ]
-
-CMD [ "app/main.py" ]
+EXPOSE 5000
+CMD ["python", "/app/main.py"]
