@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import logging
 import requests
 import json
+import traceback
 import argparse
+import sys
 from flask import Flask, jsonify, request, Response
 app = Flask(__name__)
 
@@ -15,12 +17,21 @@ class bcolors:
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 logging.info('Started country code lookup')
 
+parser = argparse.ArgumentParser()
+   
+parser.add_argument('lookup')
+parser.add_argument('--countrycode')
+
+args = parser.parse_args()
+
+#print(f'{args.lookup} is {args.countrycode} countrycode')
+
 # get request to Travel Advisory api
 response = requests.get("https://www.travel-advisory.info/api")
 
 # error if api endpoint not reachable
 if response.status_code != 200:
-	logging.error('An error occured trying to reach the API endpoint. Please check the Travel Advisory API')
+        logging.error('An error occured trying to reach the API endpoint. Please check the Travel Advisory API')
 
 # save data from api to json file
 filedata = response.json()
@@ -30,19 +41,13 @@ with open('data.json', 'w') as f:
 # Look up country by country code
 countrydata = filedata['data']
 
-inputs = input(bcolors.OKBLUE + "Enter a multiple country code values: " + bcolors.ENDC).split()
-
 logging.info('Looking up countries')
 
-for x in inputs:
-	try:
-		print (countrydata[(x)]["name"])
-	except KeyError:
-		print(bcolors.WARNING + (x) + " country code does not exist." + bcolors.ENDC)
-		continue
+for x in (args.countrycode).split(","):
+        try:
+                print (countrydata[(x)]["name"])
+        except KeyError:
+                print(bcolors.WARNING + (x) + " country code does not exist." + bcolors.ENDC)
+                continue
 
-#PARSER = argparse.ArgumentParser(
-#        description='Country Lookup Tool',
-#        formatter_class=argparse.ArgumentDefaultsHelpFormatter
-#    )
-#PARSER.add_argument('-c', '--countryCode=', type=inputs, help='Country Code')
+logging.info('Country lookup complete.')
