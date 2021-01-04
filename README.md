@@ -27,7 +27,8 @@ http://0.0.0.0:5000/diag: check status code of the api https://www.travel-adviso
 
 http://0.0.0.0:5000/convert: converts country code to coutry name.
 
-Created a container based on the Flask Docker image, then deploy to Kube cluster using MiniKube...
+
+Create a container based on the Flask Docker image, then deploy to Kube cluster using MiniKube...
 
 docker build -f Dockerfile -t country-lookup:latest .
 docker run -p 5001:5000 country-lookup 
