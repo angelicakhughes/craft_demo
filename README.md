@@ -36,7 +36,7 @@ Navigate to http://127.0.0.1:5000/
 
 http://127.0.0.1:5000/health: returns service health
 
-http://127.0.0.1:5000/diag: checks status code of the api https://www.travel-advisory.info/api return 
+http://127.0.0.1:5000/diag: checks status code of the api https://www.travel-advisory.info/api
 
 http://127.0.0.1:5000/convert: converts country code to coutry name.
 
