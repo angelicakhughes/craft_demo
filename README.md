@@ -2,7 +2,7 @@ craft_demo.sh:
 
 Usage for craft_demo.sh: ./craft_demo.sh AL,BE,GE,LI,FI
 
-Use this bash script to convert country code to coutry.
+Use this bash script to convert country code to coutry name.
 
 Alternative - 
 
@@ -21,9 +21,11 @@ export FLASK_APP=main.py
 flask run
 Navigate to http://0.0.0.0:5000/
 
-http://0.0.0.0:5000/health:
-http://0.0.0.0:5000/diag:
-http://0.0.0.0:5000/convert:
+http://0.0.0.0:5000/health: returns service health
+
+http://0.0.0.0:5000/diag: check status code of the api https://www.travel-advisory.info/api return 
+
+http://0.0.0.0:5000/convert: converts country code to coutry name.
 
 Created a container based on the Flask Docker image, then deploy to Kube cluster using MiniKube...
 
