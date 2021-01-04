@@ -52,7 +52,9 @@ docker build -f Dockerfile -t country-lookup:latest .
 docker run -p 5001:5000 country-lookup 
 
 Install Minikube:
+
 brew install minikube
+
 sudo mv minikube /usr/local/bin
 
 cd kubernetes
