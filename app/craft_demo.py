@@ -24,8 +24,6 @@ parser.add_argument('--countrycode')
 
 args = parser.parse_args()
 
-#print(f'{args.lookup} is {args.countrycode} countrycode')
-
 # get request to Travel Advisory api
 response = requests.get("https://www.travel-advisory.info/api")
 
