@@ -21,7 +21,9 @@ craft_demo.py:
 Usage for craft_demo.py: 
 ./craft_demo.py lookup --countrycode=AL,BE,GE,LI,FI,FO,ZZ
 
-### REST API Service with Flask:
+Use this python script to convert country code to coutry name.
+
+### Bonues: REST API Service with Flask:
 
 usage:
 
