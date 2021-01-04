@@ -26,9 +26,10 @@ Use this python script to convert country code to coutry name.
 usage:
 
 sudo pip install -r requirements.txt
+
 export FLASK_APP=main.py
+
 python3 -m flask run
-./main.py
 
 
 Navigate to http://127.0.0.1:5000/
