@@ -1,6 +1,3 @@
-Prereqs: Make sure you have Docker for Desktop installed.
-https://docs.docker.com/docker-for-mac/install/
-
 ### clone the repo:
 
 git clone https://github.com/angelicakhughes/craft_demo.git
@@ -44,6 +41,9 @@ http://127.0.0.1:5000/convert: converts country code to coutry name.
 
 
 ### Create a container based on the Flask Docker image, then deploy to Kube cluster using MiniKube
+
+Make sure you have Docker for Desktop installed.
+https://docs.docker.com/docker-for-mac/install/
 
 docker login
 
