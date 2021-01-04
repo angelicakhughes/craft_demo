@@ -21,7 +21,7 @@ Usage for craft_demo.py:
 
 Use this python script to convert country code to coutry name.
 
-### Bonues: REST API Service with Flask:
+### Bonus: REST API Service with Flask:
 
 usage:
 
