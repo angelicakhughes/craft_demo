@@ -37,19 +37,25 @@ cd kubernetes
 kubectl apply -f deployment.yaml 
 
 kubectl get svc
+
 kubectl get pods
 
 minikube start
+
 minikube dashboard
 
 Set Up Basic monitoring with Promethues/Grafana:
 
 kubectl get pods
+
 (select grafana pod)
+
 kubectl port-forward prometheus-operator-grafana-6c88866f7-dn4z4 3000
 
 Credentials:
+
 Admin
+
 prom-operator
 
 
