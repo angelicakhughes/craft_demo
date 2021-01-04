@@ -66,8 +66,11 @@ kubectl get pods
 
 Prometheus/Grafana:
 
-
 kubectl port-forward prometheus-operator-grafana-6c88866f7-dn4z4 3000
+
+navigate to: http://127.0.0.1:3000/
+
+Select and view dashboards for Kubelets, Cluster, Pods, etc.
 
 Credentials:
 Admin
