@@ -1,4 +1,5 @@
 Prereqs: Make sure you have Docker for Desktop installed.
+https://docs.docker.com/docker-for-mac/install/
 
 ### clone the repo:
 
