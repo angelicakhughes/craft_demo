@@ -8,3 +8,43 @@ def sort(list):
 list = [1,33,5,7,8,9]
 
 sort(list)
+
+
+# write the same without list.sort
+# merge sort
+# [1,33,5,7,8,9]
+
+def sort_without_sort(list):
+    sortedlist = []
+    while list:
+        min = list[0]
+        for i in list:
+            if i > min:
+                min = i
+        sortedlist.append(min)
+        list.remove(min)
+
+    print(sortedlist)       
+
+list = [1,33,5,7,8,9]
+
+sort_without_sort(list)
+# write the same without list.sort
+# merge sort
+# [1,33,5,7,8,9]
+
+def sort_without_sort(list):
+    sortedlist = []
+    while list:
+        min = list[0]
+        for i in list:
+            if i > min:
+                min = i
+        sortedlist.append(min)
+        list.remove(min)
+
+    print(sortedlist)       
+
+list = [1,33,5,7,8,9]
+
+sort_without_sort(list)
