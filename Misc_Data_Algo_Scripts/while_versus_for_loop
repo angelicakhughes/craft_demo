@@ -1,0 +1,15 @@
+# counter while loop
+
+count = 1
+while count <= 4:
+    print(count)
+    count += 1
+else:
+    print("while loop completed")
+    
+#print numbers in a loop
+
+for i in [1,2,3,4,5,6]
+  print(i)
+else:
+  print("For loop completed")
