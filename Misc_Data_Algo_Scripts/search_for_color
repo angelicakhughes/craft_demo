@@ -1,0 +1,5 @@
+colors = ['red','pink','blue','orange','green']
+for color in colors:
+    if color == 'orange':
+        print('orange is in the list)
+        break
