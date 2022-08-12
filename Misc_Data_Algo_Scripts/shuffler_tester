@@ -1,0 +1,25 @@
+
+
+
+sum = 52
+
+def shuffler():
+    # 13 of four different suits
+    # shuffle 5 times
+
+sortedcards = "Ah,Kh,Qh,Jh,10h,9h,8h,7h,6h,5h,4h,3h,2h, Ah,Kh,Qh,Jh,10h,9h,8h,7h,6h,5h,4h,3h,2hAh,Kh,Qh,Jh,10h,9h,8h,7h,6h,5h,4h,3h,2h
+
+
+cards = "10h,8c,1c,Kd,Qs,5s,5s,9s,10s,As,10h,8c,1c,Kd,Qs,5s,5s,9s,10s,As,10h,8c,1c,Kd,Qs,5s,5s,9s,10s,As"
+cards = "10h,8c,1c,Kd,5s,5s,9s,10s,As,10h,8c,1c,Qs,5s,5s,9s,10s,As"
+cards = "1c,Kd,5s,5s,9s,10s,As,10h,8c,1c,Qs,5s,5s,9s,10s,As"
+
+
+def test():
+    # if list1 == list2 then print ("bad")
+    # if list1 != list2 then print ("good")
+
+    #did shuffle run five times?
+
+def tolerance():
+    if list1 ==
