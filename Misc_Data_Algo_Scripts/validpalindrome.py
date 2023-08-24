@@ -1,4 +1,4 @@
-##
+## ## https://leetcode.com/problems/valid-palindrome/
 
 ## talk about the steps like to a toddler
 ## remove all spaces, chars
